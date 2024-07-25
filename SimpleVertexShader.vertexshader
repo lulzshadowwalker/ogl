@@ -1,0 +1,10 @@
+#version 330 core
+
+// vertex attrib something from ogl
+layout(location = 0) in vec3 vertexPosition_modelspace; // Vec3 input that doesn't hold a meaning of its own. we need to tell ogl what it is
+
+void main()
+{
+    gl_Position.xyz = vertexPosition_modelspace;
+    gl_Position.w = 1.0;
+}
